@@ -9,6 +9,10 @@ const Global = createGlobalStyle`
   body {
     font-family: 'Inter', sans-serif;
   }
-`;
+
+  li {
+    list-style: none;
+  }
+  `;
 
 export default Global;

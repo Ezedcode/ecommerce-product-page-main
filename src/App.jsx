@@ -1,10 +1,11 @@
 import React from "react";
+import Header from "./components/Header";
 import Global from "./theme/Global";
 
 const App = () => {
   return (
     <div>
-      App
+      <Header />
       <Global />
     </div>
   );
