@@ -1,24 +1,29 @@
 import React from "react";
 import Cart from "../Cart";
-import NavBar from "../NavBar";
 
 import Logo from "../../assets/img/logo.svg";
 import Avatar from "../../assets/img/image-avatar.png";
 import Container from "./styles";
+import Menu from "../Menu";
 
 const Header = () => {
   return (
     <Container>
       <div>
         <div>
-          <img src={Logo} alt="logo" />
+          <div>
+            <img src={Logo} alt="logo" />
+          </div>
+          <Menu />
         </div>
-        <NavBar />
+        <div>
+          <Cart />
+          <div className="user">
+            <img src={Avatar} alt="avatar" />
+          </div>
+        </div>
       </div>
-      <div>
-        <Cart />
-        <img src={Avatar} alt="avatar" />
-      </div>
+      <hr />
     </Container>
   );
 };

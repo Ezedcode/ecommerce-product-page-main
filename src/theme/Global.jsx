@@ -7,11 +7,14 @@ const Global = createGlobalStyle`
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
   }
 
   li {
     list-style: none;
+    font-weight: bold;
+    font-size:18px;
   }
   `;
 
