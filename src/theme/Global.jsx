@@ -14,7 +14,7 @@ const Global = createGlobalStyle`
   li {
     list-style: none;
     font-weight: bold;
-    font-size:18px;
+    font-size: 18px;
   }
   `;
 

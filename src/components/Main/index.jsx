@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <Container>
       <Item />
-      <section>content</section>
+      <section></section>
     </Container>
   );
 };

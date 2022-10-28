@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.header`
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   position: relative;
 
   & > div {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     padding: 2rem 0;
-
     display: flex;
     justify-content: space-between;
   }
