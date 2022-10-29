@@ -1,23 +1,22 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  & > div:last-child {
-    display: ${(props) => (!props.display ? "none" : "flex")};
+  & button {
+    display: none;
   }
 
-  & .close-btn {
-    background: none;
-    border: none;
-    margin-left: 24rem;
-    padding-bottom: 20px;
+  & img {
+    border-radius: 10px;
   }
 
-  & .close-btn path {
-    fill: hsl(0, 0%, 100%);
+  & .grid-thumbnail {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
   }
 
   & .active {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,6 +25,30 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     background-color: hsl(0, 0%, 0%, 75%);
+  }
+
+  & .active button {
+    display: block;
+  }
+
+  & > div:last-child {
+    display: ${(props) => (!props.display ? "none" : "flex")};
+    flex-direction: column;
+  }
+
+  & > div:last-child .close-btn {
+    background: none;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+  }
+
+  & > div:last-child .image-item {
+    width: 400px;
+  }
+
+  & path {
+    fill: hsl(0, 0%, 100%);
   }
 `;
 
