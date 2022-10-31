@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Container = styled.header`
   width: 71%;
   margin: 0 auto;
+  position: relative;
 
   & > div {
     width: 100%;
@@ -37,8 +38,17 @@ const Container = styled.header`
     border: 1px solid hsl(223, 64%, 98%);
   }
 
-  @media screen and (max-width: 375px) {
-    width: 90%;
+  @media screen and (max-width: 1344px) {
+    width: 60rem;
+  }
+
+  @media screen and (max-width: 1344px) {
+    width: 95%;
+  }
+
+  @media screen and (max-width: 858px) {
+    width: 92%;
+    position: static;
 
     & > div > div:first-child {
       flex-direction: row-reverse;

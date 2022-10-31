@@ -16,8 +16,8 @@ const Main = () => {
       <section>
         <p className="company">{Data.company}</p>
         <h1>{Data.title}</h1>
-        <p>{Data.content}</p>
-        <p>
+        <p className="content">{Data.content}</p>
+        <p className="sectionPrice">
           <div className="price">
             <span>${Data.price[0]}</span>
             <span>{Data.percentage}</span>

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.main`
-  width: 65%;
+  width: 60rem;
   margin: 5rem auto;
   display: flex;
   justify-content: space-between;
 
   & > section {
-    width: 50%;
+    width: 27rem;
     height: 23rem;
     align-self: center;
     display: flex;
@@ -55,17 +55,25 @@ const Container = styled.main`
     color: hsl(219, 9%, 45%);
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 1040px) {
+    width: 95%;
+  }
+
+  @media screen and (max-width: 858px) {
     width: 100%;
     margin: 0;
     flex-direction: column;
+
+    & .content {
+      width: 27rem;
+    }
 
     & h1 {
       font-size: 30px;
     }
 
     & > section {
-      width: 90%;
+      width: 92%;
       height: 28rem;
       margin: 0 auto;
       margin-top: 20px;
@@ -74,6 +82,12 @@ const Container = styled.main`
 
     & section section {
       width: 100%;
+    }
+
+    & .sectionPrice {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 `;

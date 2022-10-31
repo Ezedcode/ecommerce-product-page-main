@@ -10,8 +10,8 @@ const Container = styled.div`
     color: hsl(0, 0%, 100%);
     border: 1px solid hsl(26deg 98% 53%);
     background-color: hsl(26, 100%, 55%);
-    top: 29px;
-    right: 36px;
+    top: 30px;
+    right: 43px;
   }
 
   & .inCart {
@@ -22,7 +22,7 @@ const Container = styled.div`
     box-shadow: 0px 4px 11px -3px hsl(219deg 6% 45%);
     background-color: hsl(0, 0%, 100%);
     top: 80px;
-    right: -13px;
+    right: -20px;
     display: ${(props) => (props.showCart ? "flex" : "none")};
     flex-direction: column;
   }
@@ -100,6 +100,26 @@ const Container = styled.div`
 
   & > div:first-child:hover path {
     fill: black;
+  }
+
+  @media screen and (max-width: 858px) {
+    & .inCart {
+      z-index: 1;
+      width: 97%;
+      height: 16rem;
+      top: 112px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    & .amountInCart {
+      right: 61px;
+    }
+
+    & hr {
+      display: block !important;
+    }
   }
 `;
 

@@ -55,7 +55,7 @@ const Container = styled.div`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 858px) {
     width: 100%;
     height: 7rem;
     flex-direction: column;

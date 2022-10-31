@@ -26,7 +26,7 @@ const Container = styled.nav`
     border: 2px solid hsl(26, 100%, 55%);
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 858px) {
     padding-left: 0;
   }
 `;

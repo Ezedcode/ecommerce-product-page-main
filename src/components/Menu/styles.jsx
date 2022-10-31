@@ -19,13 +19,13 @@ export const Container = styled.div`
     left: 0;
     height: 100vh;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   }
 
   &.active .${(props) => (props.animation === false ? "hide" : "show")} {
     left: ${(props) => (props.animation === false ? "-100%" : "0%")};
     animation: ${animation} 0.5s;
-    transition: 0.5s ease-in-out;
+    transition: 0.5s;
   }
 
   & .menu-btn {
@@ -56,7 +56,7 @@ export const Container = styled.div`
     padding: 10px 0;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 858px) {
     & > div {
       display: none;
       position: relative;

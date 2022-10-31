@@ -121,7 +121,14 @@ const Container = styled.div`
     stroke: hsl(26, 100%, 55%);
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 858px) {
+    & .active {
+      position: static;
+      width: 100%;
+
+      margin-top: 2rem;
+    }
+
     & > div:first-child {
       display: none;
     }
@@ -137,6 +144,8 @@ const Container = styled.div`
     & > div:last-child .image-item {
       width: 100%;
       height: 19rem;
+      object-fit: cover;
+      object-position: top center;
     }
 
     & .next-item:nth-child(2) {
