@@ -64,10 +64,6 @@ const Container = styled.main`
     margin: 0;
     flex-direction: column;
 
-    & .content {
-      width: 27rem;
-    }
-
     & h1 {
       font-size: 30px;
     }
@@ -88,6 +84,11 @@ const Container = styled.main`
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    & .content {
+      width: 27rem;
     }
   }
 `;
