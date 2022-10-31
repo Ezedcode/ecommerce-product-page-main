@@ -13,6 +13,9 @@ import img7 from "../../assets/img/image-product-4-thumbnail.jpg";
 import img8 from "../../assets/img/image-product-4.jpg";
 import CloseBtn from "../../assets/img/icon-close";
 
+import NextButton from "../../assets/img/icon-next";
+import PreviousButton from "../../assets/img/icon-previous";
+
 import Container from "./styles";
 import { DesableScroll } from "../Menu/styles";
 
@@ -58,27 +61,37 @@ const Product = (props) => {
   return (
     <Container display={clickItem}>
       <div>
-        {
-          // eslint-disable-next-line jsx-a11y/img-redundant-alt
-          <img
-            src={images[nextImage][1]}
-            alt="image-product"
-            width="400"
-            className="image-item"
-            onClick={handleClickIn}
-          />
-        }
-      </div>
-      <div className="grid-thumbnail">
-        {images.map((value, index) => (
-          // eslint-disable-next-line jsx-a11y/img-redundant-alt
-          <img
-            src={images[index][0]}
-            alt="image-product"
-            width="80"
-            onClick={() => setNextImage(index)}
-          />
-        ))}
+        <div>
+          {
+            // eslint-disable-next-line jsx-a11y/img-redundant-alt
+            <img
+              src={!clickItem ? images[nextImage][1] : images[0][1]}
+              alt="image-product"
+              width="350"
+              className="image-item"
+              onClick={handleClickIn}
+            />
+          }
+        </div>
+        <div className="grid-thumbnail">
+          {images.map((value, index) => (
+            // eslint-disable-next-line jsx-a11y/img-redundant-alt
+            <div
+              className={(nextImage === index) & !clickItem && `imgCheck`}
+              onClick={() => setNextImage(index)}
+            >
+              {
+                // eslint-disable-next-line jsx-a11y/img-redundant-alt
+                <img
+                  src={images[index][0]}
+                  alt="image-product"
+                  width="60"
+                  onClick={() => setNextImage(index)}
+                />
+              }
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className={clickItem && "active"}>
@@ -86,7 +99,9 @@ const Product = (props) => {
           <button onClick={handleClickOut} className="close-btn">
             <CloseBtn />
           </button>
-          <button onClick={goToPreviousImage}>{"<"}</button>
+          <button onClick={goToPreviousImage} className="next-item">
+            <PreviousButton />
+          </button>
           {
             // eslint-disable-next-line jsx-a11y/img-redundant-alt
             <img
@@ -95,17 +110,21 @@ const Product = (props) => {
               className="image-item"
             />
           }
-          <button onClick={goToNextImage}>{">"}</button>
+          <button onClick={goToNextImage} className="next-item">
+            <NextButton />
+          </button>
         </div>
         <div className="grid-thumbnail">
           {images.map((value, index) => (
-            // eslint-disable-next-line jsx-a11y/img-redundant-alt
-            <img
-              src={images[index][0]}
-              alt="image-product"
-              width="80"
+            <div
+              className={nextImage === index && `imgCheck`}
               onClick={() => setNextImage(index)}
-            />
+            >
+              {
+                // eslint-disable-next-line jsx-a11y/img-redundant-alt
+                <img src={images[index][0]} alt="image-product" width="60" />
+              }
+            </div>
           ))}
         </div>
       </div>

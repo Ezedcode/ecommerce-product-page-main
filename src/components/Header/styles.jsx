@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 const Container = styled.header`
-  width: 90%;
+  width: 71%;
   margin: 0 auto;
-  position: relative;
 
   & > div {
     width: 100%;
@@ -20,14 +19,27 @@ const Container = styled.header`
 
   & .user img {
     height: 27px;
-    padding-left: 20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+  }
+
+  & .user:hover img {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid hsl(26, 100%, 55%);
   }
 
   & > div > div:first-child {
     display: flex;
   }
 
+  & hr {
+    border: 1px solid hsl(223, 64%, 98%);
+  }
+
   @media screen and (max-width: 375px) {
+    width: 90%;
+
     & > div > div:first-child {
       flex-direction: row-reverse;
     }

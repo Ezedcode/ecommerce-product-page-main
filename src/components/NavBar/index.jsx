@@ -4,11 +4,26 @@ import Container from "./styles";
 const NavBar = () => {
   return (
     <Container>
-      <li>Collections</li>
-      <li>Men</li>
-      <li>Women</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li>
+        Collections
+        <hr />
+      </li>
+      <li>
+        Men
+        <hr />
+      </li>
+      <li>
+        Women
+        <hr />
+      </li>
+      <li>
+        About
+        <hr />
+      </li>
+      <li>
+        Contact
+        <hr />
+      </li>
     </Container>
   );
 };

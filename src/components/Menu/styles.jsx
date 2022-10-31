@@ -19,6 +19,7 @@ export const Container = styled.div`
     left: 0;
     height: 100vh;
     width: 100%;
+    z-index: 1;
   }
 
   &.active .${(props) => (props.animation === false ? "hide" : "show")} {
